@@ -1,0 +1,33 @@
+﻿@model IEnumerable<br.com.fiap.QRCompras.Models.Promocoes>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+<h1>Pulo </h1>
+<div class="jumbotron">
+    <h1>QR Compras</h1>
+    <p class="lead">Veja mais sobre a solução</p>
+    <p><a href="#" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Promoções</h2>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h2>@item.Mercado</h2>
+            <p>
+                Disponiveis - @item.qtdDisponivel
+                Quantidade Total - @item.qtd
+                Valor - @item.Valor
+            </p>
+            <p>
+                <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a>
+            </p>
+        </div>
+    </div>
+}
