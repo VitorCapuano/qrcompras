@@ -1,10 +1,10 @@
-﻿using br.com.fiap.QRCompras.Models;
-using QRCompras.Models;
+﻿using QRCompras.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using QrCompras.Client;
 
 namespace QrCompras.Controllers
 {
@@ -23,6 +23,14 @@ namespace QrCompras.Controllers
 
         public ActionResult SobreNos()
         {
+            Dictionary<string, string> Headers =
+            new Dictionary<string, string>();
+            Dictionary<string, string> QueryString =
+            new Dictionary<string, string>();
+            
+            GetClient getClient = new GetClient();
+            string response = getClient.GetService("https://viacep.com.br/", "/ws/01001000/json/");
+            ViewBag.response = response;
             return View();
         }
 
