@@ -1,4 +1,4 @@
-﻿namespace br.com.fiap.QRCompras.Models
+﻿namespace QRCompras.Models
 {
     public class Promocoes
     {
